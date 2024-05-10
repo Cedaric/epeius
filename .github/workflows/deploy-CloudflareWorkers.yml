@@ -18,6 +18,9 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          secrets: SHA224PASS
+          secrets: | 
+            SHA224PASS
+            PROXYIP
         env:
           SHA224PASS: ${{ secrets.SHA224PASS }}
+          PROXYIP: ${{ secrets.PROXYIP }}
