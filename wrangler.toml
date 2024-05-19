@@ -1,0 +1,4 @@
+name = "nepeius"
+main = "_worker.src.js"
+node_compat = true
+compatibility_date = "2024-05-19"
