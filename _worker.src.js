@@ -1615,7 +1615,7 @@ function surge(content, url) {
         if (x.includes(atob('PSB0cm9qYW4s'))) {
             const host = x.split("sni=")[1].split(",")[0];
             const 备改内容 = `skip-cert-verify=true, tfo=false, udp-relay=false`;
-            const 正确内容 = `skip-cert-verify=true, ws=true, ws-path=${path}, ws-headers=Host:"${host}", tfo=false, udp-relay=false`;
+            const 正确内容 = `skip-cert-verify=true, ws=true, ws-path=${path}, ws-headers=Host:"${host}", tfo=false, udp-relay=false, test-url=http://edge.microsoft.com/captiveportal/generate_204`;
             输出内容 += x.replace(new RegExp(备改内容, 'g'), 正确内容).replace("[", "").replace("]", "") + '\n';
         } else {
             输出内容 += x + '\n';
